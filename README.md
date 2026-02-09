@@ -12,13 +12,17 @@ A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill for genera
 
 ## Installation
 
-Add this skill to your Claude Code project:
+### Claude Code (Plugin)
 
 ```bash
-claude mcp add-skill academic-manuscript https://github.com/kchemorion/academic-manuscript-skill
+/plugin install kchemorion/academic-manuscript-skill
 ```
 
-Or clone it directly into your Claude Code skills directory:
+### Claude.ai
+
+Go to **Settings > Capabilities > Skills**, upload the `skills/SKILL.md` file.
+
+### Manual / Clone
 
 ```bash
 git clone https://github.com/kchemorion/academic-manuscript-skill.git
@@ -97,12 +101,16 @@ After injection, citations in Word will:
 ## Repository Structure
 
 ```
-├── SKILL.md                        # Full skill definition and documentation
-├── scripts/
-│   ├── fetch_references.py         # CrossRef reference fetcher
-│   └── inject_zotero_fields.py     # Zotero field code injector
-└── references/
-    └── journal-styles.md           # Formatting reference for major journals
+├── .claude-plugin/
+│   └── plugin.json                 # Plugin metadata
+├── skills/
+│   ├── SKILL.md                    # Full skill definition and documentation
+│   ├── scripts/
+│   │   ├── fetch_references.py     # CrossRef reference fetcher
+│   │   └── inject_zotero_fields.py # Zotero field code injector
+│   └── references/
+│       └── journal-styles.md       # Formatting reference for major journals
+└── README.md
 ```
 
 ## Supported Journals
@@ -115,7 +123,7 @@ After injection, citations in Word will:
 | PLOS ONE | [N] numbered | 300 words | Before results |
 | IEEE | [N] numbered | 200 words | Before results |
 
-See [`references/journal-styles.md`](references/journal-styles.md) for full details.
+See [`skills/references/journal-styles.md`](skills/references/journal-styles.md) for full details.
 
 ## License
 

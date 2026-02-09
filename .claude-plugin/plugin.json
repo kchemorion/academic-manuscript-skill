@@ -1,0 +1,12 @@
+{
+  "name": "academic-manuscript",
+  "version": "1.0.0",
+  "description": "Generate publication-ready scientific manuscripts with real references, Zotero field codes, and journal-quality formatting",
+  "homepage": "https://github.com/kchemorion/academic-manuscript-skill",
+  "skills": [
+    {
+      "name": "academic-manuscript",
+      "path": "skills/SKILL.md"
+    }
+  ]
+}

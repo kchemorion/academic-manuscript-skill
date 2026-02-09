@@ -1,0 +1,9 @@
+*.tar.gz
+*.zip
+__pycache__/
+*.pyc
+node_modules/
+unpacked/
+*.docx
+references.json
+refs_input.json
